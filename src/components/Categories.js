@@ -37,11 +37,10 @@ const CategoriesBlock = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  width: 768px;
+  width: 668px;
   margin: 0 auto;
-  @media screen and(max-width: 768px) {
-    width: 100%;
-    overflow-x: auto;
+  @media screen and (max-width: 768px) {
+    width: 30%;
   }
 `;
 
@@ -52,6 +51,10 @@ const Category = styled.div`
   text-decoration: none;
   color: inherit;
   padding-bottom: 0.25rem;
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    font-size: 1rem;
+  }
 
   &:hover {
     color: #495057;
@@ -61,6 +64,7 @@ const Category = styled.div`
     active &&
     css`
       font-weight: 600;
+      padding-bottom: 0.335rem;
       border-bottom: 2.5px solid #456bda;
       color: #456bda;
       &:hover {

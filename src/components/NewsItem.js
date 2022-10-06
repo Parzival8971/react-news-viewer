@@ -11,11 +11,19 @@ const NewsItemBlock = styled.div`
       width: 160px;
       height: 100px;
       object-fit: cover;
+      @media screen and (max-width: 768px) {
+        width: 100px;
+        height: auto;
+      }
     }
   }
   .contents {
     h2 {
       margin: 0;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 1rem;
+      }
       a {
         color: black;
       }
@@ -25,6 +33,10 @@ const NewsItemBlock = styled.div`
       line-height: 1.5;
       margin-top: 0.5rem;
       white-space: normal;
+      @media screen and (max-width: 768px) {
+        /* width: 80%; */
+        font-size: 0.8rem;
+      }
     }
   }
   & + & {
