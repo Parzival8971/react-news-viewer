@@ -6,10 +6,14 @@ import NewsItem from './NewsItem';
 const NewsListBlock = styled.div`
   box-sizing: border-box;
   padding-bottom: 3rem;
-  width: 668px;
-  min-height: 500px;
+  width: 768px;
+  min-height: 768px;
   margin: 0 auto;
-  margin-top: 2rem;
+  background: white;
+  padding: 2px 20px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
   @media screen and (max-width: 768px) {
     width: 80%;
     padding-left: 1rem;

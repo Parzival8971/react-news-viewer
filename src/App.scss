@@ -6,6 +6,7 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: white;
+  box-sizing: border-box;
   @media screen and (max-width: 768px) {
     width: 80%;
   }
