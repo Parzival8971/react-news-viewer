@@ -1,5 +1,6 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import BounceLoader from 'react-spinners/ClipLoader';
+import axios from 'axios';
 import styled from 'styled-components';
 import NewsItem from './NewsItem';
 
@@ -13,6 +14,24 @@ const NewsListBlock = styled.div`
   padding: 2px 20px;
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`;
+
+const LodingBlock = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+  min-height: 568px;
+  margin: 0 auto;
+  background: white;
+  font-weight: bold;
 
   @media screen and (max-width: 768px) {
     width: 80%;
@@ -44,7 +63,11 @@ const NewsList = ({ category }) => {
   }, [category]);
 
   if (loading) {
-    return <NewsListBlock>대기 중...</NewsListBlock>;
+    return (
+      <LodingBlock>
+        <BounceLoader color='#36d7b7' size={50} />
+      </LodingBlock>
+    );
   }
 
   if (!articles) {

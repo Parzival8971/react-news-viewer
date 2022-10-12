@@ -58,7 +58,7 @@ const Category = styled(NavLink)`
   color: inherit;
   padding-bottom: 0.25rem;
   @media screen and (max-width: 768px) {
-    font-size: 0.925rem;
+    font-size: 0.825rem;
     margin-left: 0rem;
     margin-right: 0rem;
   }
